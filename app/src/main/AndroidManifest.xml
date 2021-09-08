@@ -12,10 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SprintExercise">
         <activity
-            android:name=".Lucas"
+            android:name=".view.Example"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".view.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

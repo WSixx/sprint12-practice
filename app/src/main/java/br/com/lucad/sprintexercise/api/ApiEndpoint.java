@@ -1,4 +1,4 @@
-package br.com.lucad.sprintexercise;
+package br.com.lucad.sprintexercise.api;
 
 import br.com.lucad.sprintexercise.model.Covid;
 import retrofit2.Call;
@@ -8,5 +8,4 @@ public interface ApiEndpoint {
 
     @GET("summary")
     Call<Covid> getCovid();
-
 }
