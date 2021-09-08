@@ -1,74 +1,67 @@
 package br.com.lucad.sprintexercise.model;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+import java.util.List;
+
 public class Covid {
-    private int NewConfirmed;
-    private int TotalConfirmed;
-    private int NewDeaths;
-    private int TotalDeaths;
-    private int NewRecovered;
-    private int TotalRecovered;
-    private String Date;
 
-    public Covid() {
+    @SerializedName("ID")
+    @Expose
+    private String id;
+    @SerializedName("Message")
+    @Expose
+    private String message;
+    @SerializedName("Global")
+    @Expose
+    private Global global;
+    @SerializedName("Countries")
+    @Expose
+    private List<Country> countries = null;
+    @SerializedName("Date")
+    @Expose
+    private String date;
+
+    public String getId() {
+        return id;
     }
 
-
-
-    public int getNewConfirmed() {
-        return NewConfirmed;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public void setNewConfirmed(int newConfirmed) {
-        this.NewConfirmed = newConfirmed;
+    public String getMessage() {
+        return message;
     }
 
-    public int getTotalConfirmed() {
-        return TotalConfirmed;
+    public void setMessage(String message) {
+        this.message = message;
     }
 
-    public void setTotalConfirmed(int totalConfirmed) {
-        this.TotalConfirmed = totalConfirmed;
+    public Global getGlobal() {
+        return global;
     }
 
-    public int getNewDeaths() {
-        return NewDeaths;
+    public void setGlobal(Global global) {
+        this.global = global;
     }
 
-    public void setNewDeaths(int newDeaths) {
-        this.NewDeaths = newDeaths;
+    public List<Country> getCountries() {
+        return countries;
     }
 
-    public int getTotalDeaths() {
-        return TotalDeaths;
-    }
-
-    public void setTotalDeaths(int totalDeaths) {
-        this.TotalDeaths = totalDeaths;
-    }
-
-    public int getNewRecovered() {
-        return NewRecovered;
-    }
-
-    public void setNewRecovered(int newRecovered) {
-        this.NewRecovered = newRecovered;
-    }
-
-    public int getTotalRecovered() {
-        return TotalRecovered;
-    }
-
-    public void setTotalRecovered(int totalRecovered) {
-        this.TotalRecovered = totalRecovered;
+    public void setCountries(List<Country> countries) {
+        this.countries = countries;
     }
 
     public String getDate() {
-        return Date;
+        return date;
     }
 
     public void setDate(String date) {
-        this.Date = date;
+        this.date = date;
     }
 
-
 }
+
